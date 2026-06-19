@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.288)), rgba(0, 0, 0, 0)
+    url("../imagens/background.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-container{
+    width: 360px;
+    height: 380px;
+    background: rgba(63, 55, 49, 0.29);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(26px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    margin-top: 30px;
+    color: #e2dede;
+    font-weight: 500;
+}
+
+.navegacao{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-botao{
+    background-color: #e2dede;
+    margin: 10px;
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.nav-botao:hover{
+    background-color: rgb(255, 110, 26);
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-botao-voltar{
+    background-color: #e2dede;
+    margin-top: 60px;
+    height: 20px;
+    width: 75px;
+    font-size: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.nav-botao-voltar:hover{
+    background-color: rgb(255, 26, 26);
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
