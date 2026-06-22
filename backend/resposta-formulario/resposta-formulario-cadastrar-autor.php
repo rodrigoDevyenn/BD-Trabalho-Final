@@ -52,6 +52,7 @@
     } else {
         echo ("Nacionalidade não cadastrada!");
     }
+    $conexao->close();
     ?>
 
 </body>

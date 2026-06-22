@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Livros</title>
+    <link rel="stylesheet" href="../../frontend/css/formularios-style.css">
+</head>
+<body>
+    <form method="post" name="formulario-cadastro-livro" action="../../backend/resposta-formulario/resposta-formulario-cadastro-livro.php">
+        <h1>Cadastro de Livro</h1>
+        <div class="formulario-campos">
+            <label for="titulo">Título:</label>
+            <input name="titulo" type="text">
+        </div>
+        <div class="formulario-campos">
+            <label for="autor">Autor:</label>
+            <input name="autor" type="text">
+        </div>
+        <div class="formulario-campos">
+            <label for="assunto">Assunto:</label>
+            <input name="assunto" list="assuntos" type="text">
+            <datalist id="assuntos"></datalist>
+        </div>
+        <div class="formulario-campos">
+            <label for="editora">Editora:</label>
+            <input name="editora" list="editoras" type="text">
+            <datalist id="editoras"></datalist>
+        </div>
+        <div class="formulario-campos">
+            <label for="isbn">ISBN:</label>
+            <input name="isbn" type="text">
+        </div>
+        <div class="formulario-campos">
+            <label for="datalancamento">Data de Lançamento:</label>
+            <input name="datalancamento" type="date">
+        </div>
+        <div class="formulario-campos">
+            <label for="preco">Valor:</label>
+            <input name="preco" type="number" step="0.01">
+        </div>
+        <div class="formulario-botoes">
+            <button type="reset">Limpar</button>
+            <button type="submit">Cadastrar</button>
+        </div>   
+    </form>
+</body>
+</html>

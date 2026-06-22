@@ -47,6 +47,7 @@
             echo("Erro ao cadastrar editora: " . $conexao->error);
         }
     }
+    $conexao->close();
     ?>
 
 </body>

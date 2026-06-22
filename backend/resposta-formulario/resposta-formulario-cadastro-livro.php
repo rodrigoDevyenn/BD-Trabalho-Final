@@ -83,6 +83,7 @@
     } else {
         echo ("Autor não cadastrado!");
     }
+    $conexao->close();
     ?>
 
 </body>
