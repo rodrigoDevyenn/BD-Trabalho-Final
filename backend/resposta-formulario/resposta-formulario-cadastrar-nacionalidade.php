@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Editora</title>
+    <title>Cadastrar Nacionalidade</title>
 </head>
 <body>
     <?php
@@ -20,31 +20,30 @@
     }
 
     //dados do formulário
-    $cnpj = TRIM($_POST["cnpj"]);
-    $nome = TRIM($_POST["nome"]);
+    $pais = TRIM($_POST["pais"]);
     
     
-    $sql_editora = "SELECT cnpj FROM editora WHERE cnpj = '$cnpj'";
-    $resultado_editora = $conexao->query($sql_editora);
+    $sql_nacionalidade = "SELECT pais FROM nacionalidade WHERE cnpj = '$pais'";
+    $resultado_nacionalidade = $conexao->query($sql_nacionalidade);
 
     
-    if ($resultado_editora->num_rows > 0) {
+    if ($resultado_nacionalidade->num_rows > 0) {
 
-        echo("Editora já cadastradada!");
+        echo("Nacionalidade já cadastradada!");
 
     } else {
         $comando = "
-        INSERT INTO editora
-            (cnpj, nome)
+        INSERT INTO nacionalidade
+            (pais)
         VALUES
-            ('$cnpj', '$nome')";
+            ('$pais')";
 
         $consulta = mysqli_query($conexao, $comando);
         
         if ($consulta){
-            echo("Editora Cadastrada com Sucesso!");
+            echo("Nacionalidade Cadastrada com Sucesso!");
         } else {
-            echo("Erro ao cadastrar editora: " . $conexao->error);
+            echo("Erro ao cadastrar nacionalidade: " . $conexao->error);
         }
     }
     $conexao->close();
