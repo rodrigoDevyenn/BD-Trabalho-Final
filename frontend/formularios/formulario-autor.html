@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Livros</title>
+    <link rel="stylesheet" href="../../frontend/css/formularios-style.css">
+</head>
+<body>
+    <form method="post" name="formulario-cadastro-livro" action="../../backend/resposta-formulario/resposta-formulario-cadastro-autor.php">
+        <h1>Cadastro de Autor</h1>
+        <div class="formulario-campos">
+            <label for="nome">Nome:</label>
+            <input name="nome" type="text">
+        </div>
+        <div class="formulario-campos">
+            <label for="passaporte">Passaporte:</label>
+            <input name="passaporte" type="text">
+        </div>
+        <div class="formulario-campos">
+            <label for="datanascimento">Data de Nascimento:</label>
+            <input name="datanascimento" type="date">
+        </div>
+        <div class="formulario-campos">
+            <label for="nacionalidade">Nacionalidade:</label>
+            <input name="nacionalidade" list="nacionalidades" type="text">
+            <datalist id="nacionalidades"></datalist>
+        </div>
+        <div class="formulario-botoes">
+            <button type="reset">Limpar</button>
+            <button type="submit">Cadastrar</button>
+        </div>   
+    </form>
+</body>
+</html>
